@@ -1,0 +1,72 @@
+{
+  "plugins": [
+    "compat",
+    "extra-rules",
+    "jsx-control-statements",
+  ],
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:jsx-control-statements/recommended"
+  ],
+  "globals": {
+    "__DEV__": true,
+    "BROWSER_BUILD": true,
+    "window": true,
+    "document": true,
+    "location": true,
+    "Choose": true,
+    "When": true,
+    "Otherwise": true,
+    "If": true,
+    "Else": true,
+    "For": true,
+  },
+  "rules": {
+    "compat/compat": "error",
+    "consistent-return": 0,
+    "class-methods-use-this": 0,
+    "func-names": ["error", "as-needed"],
+    "max-len": 0,
+    "no-multi-assign": 0,
+    "no-param-reassign": ["error", { "props": false }],
+    "prefer-destructuring": ["error", {
+      "VariableDeclarator": {
+        "array": false,
+        "object": true
+      },
+      "AssignmentExpression": {
+        "array": false,
+        "object": false
+      }
+    }, {
+      "enforceForRenamedProperties": false
+    }],
+    "sort-keys": 2,
+    "import/newline-after-import": ["error": { "count": 2 }],
+    "import/order": ["error", "newlines-between": "always-and-inside-groups"],
+    "import/prefer-default-export": 0,
+    "jsx-quotes": [2, "prefer-double"],
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": [],
+    }],
+    "jsx-a11y/media-has-caption": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": [
+      1, {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/jsx-no-undef": [2, { "allowGlobals": true }],
+    "react/jsx-quotes": 0,
+    "react/jsx-sort-props": 2,
+    "react/no-danger": 0,
+    "react/require-default-props": 0,
+    "extra-rules/no-commented-out-code": 2,
+  },
+  "settings": {
+    "polyfills": ["fetch", "promises"]
+  }
+}
